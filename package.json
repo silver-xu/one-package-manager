@@ -16,6 +16,10 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/commit-analyzer": "^7.0.0",
+    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/npm": "^6.0.0",
+    "@semantic-release/release-notes-generator": "^7.3.5",
     "@types/jest": "^24.0.25",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
@@ -25,11 +29,7 @@
     "jest": "^24.9.0",
     "semantic-release": "^16.0.1",
     "ts-jest": "^24.3.0",
-    "typescript": "^3.7.4",
-    "@semantic-release/commit-analyzer": "^7.0.0",
-    "@semantic-release/git": "^8.0.0",
-    "@semantic-release/npm": "^6.0.0",
-    "@semantic-release/release-notes-generator": "^7.3.5"
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {
@@ -37,9 +37,15 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "onePackageManager": {
+    "enforcePackageManager": "yarn"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/silver-xu/one-package-manager.git"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "slash": "^3.0.0"
+  }
 }
