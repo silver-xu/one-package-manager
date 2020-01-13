@@ -44,7 +44,7 @@
     "type": "git",
     "url": "https://github.com/silver-xu/one-package-manager.git"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "dependencies": {
     "slash": "^3.0.0"
   }
