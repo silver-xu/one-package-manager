@@ -1,4 +1,4 @@
-# TS Module Boilerplate [![Build Status](https://travis-ci.org/silver-xu/ts-module-boilerplate.svg?branch=master)](https://travis-ci.org/silver-xu/ts-module-boilerplate) [![codecov](https://codecov.io/gh/silver-xu/ts-module-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/silver-xu/ts-module-boilerplate) [![greenkeeper](https://badges.greenkeeper.io/silver-xu/ts-module-boilerplate.svg?style=flat)](https://badges.greenkeeper.io/silver-xu/ts-module-boilerplate.svg?style=flat)
+# TS Module Boilerplate [![Build Status](https://travis-ci.org/silver-xu/one-package-manager.svg?branch=master)](https://travis-ci.org/silver-xu/one-package-manager) [![codecov](https://codecov.io/gh/silver-xu/one-package-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/silver-xu/one-package-manager) [![greenkeeper](https://badges.greenkeeper.io/silver-xu/one-package-manager.svg?style=flat)](https://badges.greenkeeper.io/silver-xu/one-package-manager.svg?style=flat)
 
 > Typescript Module boilerplate powered by ESlint, Prettier, Husky, Semantic-Release and Commitlint
 

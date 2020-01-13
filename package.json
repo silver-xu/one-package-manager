@@ -1,5 +1,5 @@
 {
-  "name": "ts-module-boilerplate",
+  "name": "one-package-manager",
   "description": "Typescript npm module boilerplate",
   "main": "dist/index.js",
   "scripts": {
@@ -25,7 +25,11 @@
     "jest": "^24.9.0",
     "semantic-release": "^16.0.1",
     "ts-jest": "^24.3.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "@semantic-release/commit-analyzer": "^7.0.0",
+    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/npm": "^6.0.0",
+    "@semantic-release/release-notes-generator": "^7.3.5"
   },
   "husky": {
     "hooks": {
@@ -33,16 +37,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {
-    "@semantic-release/commit-analyzer": "^7.0.0",
-    "@semantic-release/git": "^8.0.0",
-    "@semantic-release/npm": "^6.0.0",
-    "@semantic-release/release-notes-generator": "^7.3.5",
-    "semantic-release-cli": "^5.2.3"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/silver-xu/ts-module-boilerplate.git"
+    "url": "https://github.com/silver-xu/one-package-manager.git"
   },
   "version": "1.0.0"
 }
