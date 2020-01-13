@@ -1,0 +1,48 @@
+{
+  "name": "ts-module-boilerplate",
+  "description": "Typescript npm module boilerplate",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn build && node dist/index",
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "test": "jest",
+    "codecov": "codecov",
+    "semantic-release": "semantic-release"
+  },
+  "author": "Silver Xu",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^24.0.25",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "codecov": "^3.6.1",
+    "eslint": "^6.8.0",
+    "husky": "^4.0.6",
+    "jest": "^24.9.0",
+    "semantic-release": "^16.0.1",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@semantic-release/commit-analyzer": "^7.0.0",
+    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/npm": "^6.0.0",
+    "@semantic-release/release-notes-generator": "^7.3.5",
+    "semantic-release-cli": "^5.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silver-xu/ts-module-boilerplate.git"
+  },
+  "version": "1.0.0"
+}
