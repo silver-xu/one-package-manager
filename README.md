@@ -10,7 +10,7 @@
 
 Put the following code in package.json of the intended repo:
 
-```
+```json
 {
   "scripts":{
     "preinstall": "npx one-package-manager";
@@ -20,4 +20,22 @@ Put the following code in package.json of the intended repo:
 
 ## Options
 
-Change `npx one-package-manager` into `npx one-package-manager --yarn` (default) to enforce Yarn as the package manager, or `npx one-package-manager --yarn` to enforce NPM as the package maanger.
+To enforce the use of Yarn (default)
+
+```json
+{
+  "scripts":{
+    "preinstall": "npx one-package-manager --yarn";
+  }
+}
+```
+
+To enforce the use of NPM (default)
+
+```json
+{
+  "scripts":{
+    "preinstall": "npx one-package-manager --npm";
+  }
+}
+```
