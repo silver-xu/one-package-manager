@@ -12,8 +12,8 @@ Put the following code in package.json of the intended repo:
 
 ```json
 {
-  "scripts":{
-    "preinstall": "npx one-package-manager";
+  "scripts": {
+    "preinstall": "npx one-package-manager"
   }
 }
 ```
@@ -24,8 +24,8 @@ To enforce the use of Yarn (default)
 
 ```json
 {
-  "scripts":{
-    "preinstall": "npx one-package-manager --yarn";
+  "scripts": {
+    "preinstall": "npx one-package-manager --yarn"
   }
 }
 ```
@@ -34,8 +34,8 @@ To enforce the use of NPM (default)
 
 ```json
 {
-  "scripts":{
-    "preinstall": "npx one-package-manager --npm";
+  "scripts": {
+    "preinstall": "npx one-package-manager --npm"
   }
 }
 ```
