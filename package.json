@@ -1,6 +1,14 @@
 {
   "name": "one-package-manager",
-  "description": "Typescript npm module boilerplate",
+  "description": "Enforce consistent use of Yarn or NPM within a team",
+  "keywords": [
+    "Package",
+    "Manager",
+    "Package Manager",
+    "Yarn",
+    "NPM",
+    "Teamworks"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "start": "yarn build && node dist/cli",
