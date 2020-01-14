@@ -16,34 +16,22 @@ describe('index', () => {
   describe('validatePackageManager', () => {
     it('when invoking commad with npm and enforcePackageManager set to yarn should throw Error', () => {
       process.env.npm_execpath = '/node_modules/npm';
-      expect(() =>
-        validatePackageManager({
-          onePackageManager: {
-            enforcePackageManager: 'yarn',
-          },
-        }),
-      ).toThrow(new Error('OnePackageManager: Please use Yarn instead'));
+      expect(() => validatePackageManager('yarn')).toThrow(new Error('Please use Yarn instead'));
     });
 
-    it('when invoking commad with npm and no setting should default to use yarn and throw Error', () => {
+    it('when invoking commad with npm and enforcePackageManager set to npm should not throw Error', () => {
       process.env.npm_execpath = '/node_modules/npm';
-      expect(() => validatePackageManager(undefined)).toThrow(new Error('OnePackageManager: Please use Yarn instead'));
-    });
-
-    it('when invoking commad with npm and enforcePackageManager setting should default to use yarn and throw Error', () => {
-      process.env.npm_execpath = '/node_modules/npm';
-      expect(() => validatePackageManager({})).toThrow(new Error('OnePackageManager: Please use Yarn instead'));
+      expect(() => validatePackageManager('npm')).not.toThrow(new Error('Please use Yarn instead'));
     });
 
     it('when invoking commad with yarn and enforcePackageManager set to npm should throw Error', () => {
       process.env.npm_execpath = '/node_modules/yarn';
-      expect(() =>
-        validatePackageManager({
-          onePackageManager: {
-            enforcePackageManager: 'npm',
-          },
-        }),
-      ).toThrow(new Error('OnePackageManager: Please use NPM instead'));
+      expect(() => validatePackageManager('npm')).toThrow(new Error('Please use NPM instead'));
+    });
+
+    it('when invoking commad with yarn and enforcePackageManager set to yarn should not throw Error', () => {
+      process.env.npm_execpath = '/node_modules/yarn';
+      expect(() => validatePackageManager('yarn')).not.toThrow(new Error('Please use NPM instead'));
     });
   });
 });

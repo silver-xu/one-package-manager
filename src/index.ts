@@ -5,20 +5,16 @@ export const usingNPM = (): boolean => {
   return Boolean(nex && /node_modules\/npm/.test(slash(nex)));
 };
 
-export const validatePackageManager = (settings: any): void => {
-  let enforcePackageManager = settings?.onePackageManager?.enforcePackageManager;
+export type PackageManager = 'yarn' | 'npm';
 
-  if (!enforcePackageManager || !['yarn', 'npm'].find(value => value === enforcePackageManager.toLowerCase())) {
-    enforcePackageManager = 'yarn';
-  }
-
+export const validatePackageManager = (packageManager: PackageManager): void => {
   if (usingNPM()) {
-    if (enforcePackageManager === 'yarn') {
-      throw new Error('OnePackageManager: Please use Yarn instead');
+    if (packageManager === 'yarn') {
+      throw new Error('Please use Yarn instead');
     }
   } else {
-    if (enforcePackageManager === 'npm') {
-      throw new Error('OnePackageManager: Please use NPM instead');
+    if (packageManager === 'npm') {
+      throw new Error('Please use NPM instead');
     }
   }
 };
