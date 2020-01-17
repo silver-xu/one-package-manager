@@ -5,7 +5,7 @@ import commander from 'commander';
 import chalk from 'chalk';
 import figlet from 'figlet';
 
-export const start = () => {
+export const start = (): void => {
   const program = new commander.Command();
 
   program
