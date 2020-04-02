@@ -54,7 +54,7 @@
   },
   "version": "1.4.1",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "commander": "^4.1.0",
     "figlet": "^1.2.4",
     "slash": "^3.0.0"
